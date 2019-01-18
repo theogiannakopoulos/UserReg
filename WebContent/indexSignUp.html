@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SIGN UP</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+    #registrationForm label{
+      display: inline-block;
+      width: 100px;
+      text-align: right;
+    }
+    #submitBtn{
+      padding-left: 100px;
+    }
+    #registrationForm div{
+      margin-top: 1em;
+    }
+    textarea{
+      vertical-align: top;
+      height: 5em;
+    }
+      
+    .error{
+      display: none;
+      margin-left: 10px;
+    }    
+    
+    .error_show{
+      color: red;
+      margin-left: 10px;
+    }
+    
+    input.invalid, textarea.invalid{
+      border: 2px solid red;
+    }
+    
+    input.valid, textarea.valid{
+      border: 2px solid green;
+    }
+  </style>
+  <script src="main.js"></script>
+<body>
+<h1 class="text-center font-weight-bold bg-success">SIGN UP</h1>
+<div class="container"><br>
+		
+		<div class="col-lg-6 m-auto d-block">
+			
+			<form id="registationForm" method="POST" action="RegisterServlet"  class="bg-light" >
+				
+				<div class="form-group">
+					<label for="registration_firstName" class="font-weight-bold"> First name: </label>
+					<input type="text" name="fname" class="form-control" id="registration_firstName" autocomplete="off">
+					<span id="fname" class="text-danger font-weight-bold"> </span>
+					<span id="spanId" class="error">This field is required</span>
+				</div>
+
+				<div class="form-group">
+					<label for="registration_lastName" class="font-weight-bold"> Last name: </label>
+					<input type="text" name="lname" class="form-control" id="registration_lastName" autocomplete="off">
+					<span id="lname" class="text-danger font-weight-bold"> </span>
+					<span class="error">This field is required</span>
+				</div>
+
+				<div class="form-group">
+					<label for="registration_email" class="font-weight-bold"> Email: </label>
+					<input type="text" name="email" class="form-control" id="registration_email" autocomplete="off">
+					<span id="email" class="text-danger font-weight-bold"> </span>
+					<span class="error">Enter a valid email</span>
+				</div>
+
+				<div class="form-group">
+					<label for="registration_modile" class="font-weight-bold"> Mobile Number: </label>
+					<input type="text" name="mobile" class="form-control" id="registration_modile" autocomplete="off">
+					<span id="phone" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group">
+					<label for="registration_company" class="font-weight-bold"> Company: </label>
+					<input type="text" name="company" class="form-control" id="registration_company" autocomplete="off">
+					<span id="company" class="text-danger font-weight-bold"> </span>
+				</div>
+				
+				<div class="form-group">
+					<label for="registration_pass" class="font-weight-bold"> Password: </label>
+					<input type="password" name="pass" class="form-control" id="registration_pass" autocomplete="off">
+					<span id="pass" class="text-danger font-weight-bold"> </span>
+					<span class="error">This field is required</span>
+				</div>
+				
+				<div class="form-group">
+					<label for="registration_confirmPass" class="font-weight-bold"> Confirm Password: </label>
+					<input type="password" name="conpass" class="form-control" id="registration_confirmPass" autocomplete="off">
+					<span id="conpass" class="text-danger font-weight-bold"> </span>
+					<span class="error">Please enter the same password</span>
+				</div>
+				
+
+				<input type="submit" name="submit" value="submit" id="submitBtn" class="btn btn-success"	autocomplete="off">
+				
+
+			</form>
+			<div>
+			<p><a href="indexSignIn.html">Already have an account</a></p>
+			</div>
+		</div>
+	</div>
+	
+</body>
+
+</html>
